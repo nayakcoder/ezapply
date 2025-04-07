@@ -15,7 +15,7 @@ const Header = () => {
     <header className="fixed w-full backdrop-blur-md bg-ezapply-lightblue/80 z-50 border-b border-ezapply-gray/30">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-heading font-bold text-2xl">EZ<span className="text-ezapply-blue">Apply</span></span>
+          <span className="font-heading font-bold text-2xl text-ezapply-darkblue">EZ<span className="text-ezapply-blue">Apply</span></span>
         </Link>
         
         {/* Desktop Navigation */}

@@ -68,10 +68,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ezapply: {
-					blue: '#186CCC',
-					darkblue: '#20446F',
-					lightblue: '#DFEAF8',
-					gray: '#849EC0',
+					blue: '#186CCC',    // Bright blue from image
+					darkblue: '#20446F', // Dark blue from image
+					lightblue: '#DFEAF8', // Light blue from image
+					gray: '#849EC0',     // Gray blue from image
 					red: '#E63946',
 					teal: '#2EC4B6'
 				}

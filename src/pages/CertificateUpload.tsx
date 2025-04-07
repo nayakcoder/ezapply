@@ -80,10 +80,10 @@ const CertificateUpload = () => {
   return (
     <div className="min-h-screen bg-ezapply-lightblue">
       {/* Sidebar Navigation (reused from Dashboard) */}
-      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-darkblue text-white shadow-lg">
+      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-darkblue text-ezapply-lightblue shadow-lg">
         <div className="p-6">
           <div className="flex items-center gap-2 mb-8">
-            <span className="font-bold text-2xl">EZ<span className="text-ezapply-blue">Apply</span></span>
+            <span className="font-bold text-2xl text-white">EZ<span className="text-ezapply-blue">Apply</span></span>
           </div>
           
           <nav className="space-y-6">
@@ -125,8 +125,8 @@ const CertificateUpload = () => {
         
         <Card className="max-w-3xl bg-white">
           <CardHeader>
-            <CardTitle>Academic & Test Information</CardTitle>
-            <CardDescription>
+            <CardTitle className="text-ezapply-darkblue">Academic & Test Information</CardTitle>
+            <CardDescription className="text-ezapply-gray">
               Fill this form with your SAT/ACT/GRE/GMAT and other training certifications.
             </CardDescription>
           </CardHeader>
@@ -135,11 +135,11 @@ const CertificateUpload = () => {
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="degree">Highest Degree Obtained</Label>
+                    <Label htmlFor="degree" className="text-ezapply-darkblue">Highest Degree Obtained</Label>
                     <Select
                       onValueChange={(value) => handleSelectChange("degree", value)}
                     >
-                      <SelectTrigger>
+                      <SelectTrigger className="text-ezapply-darkblue">
                         <SelectValue placeholder="Select degree" />
                       </SelectTrigger>
                       <SelectContent>
@@ -153,23 +153,25 @@ const CertificateUpload = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="major">Major Subject</Label>
+                    <Label htmlFor="major" className="text-ezapply-darkblue">Major Subject</Label>
                     <Input
                       id="major"
                       placeholder="e.g. Computer Science"
                       value={formData.major}
                       onChange={handleChange}
+                      className="text-ezapply-darkblue"
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="gpa">GPA/Percentage</Label>
+                  <Label htmlFor="gpa" className="text-ezapply-darkblue">GPA/Percentage</Label>
                   <Input
                     id="gpa"
                     placeholder="e.g. 3.5 or 85%"
                     value={formData.gpa}
                     onChange={handleChange}
+                    className="text-ezapply-darkblue"
                   />
                   <p className="text-xs text-amber-600 flex items-center mt-1">
                     <Info className="h-3 w-3 mr-1" />
@@ -182,42 +184,46 @@ const CertificateUpload = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="satScore">SAT Score</Label>
+                      <Label htmlFor="satScore" className="text-ezapply-darkblue">SAT Score</Label>
                       <Input
                         id="satScore"
                         placeholder="e.g. 1200"
                         value={formData.satScore}
                         onChange={handleChange}
+                        className="text-ezapply-darkblue"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="actScore">ACT Score</Label>
+                      <Label htmlFor="actScore" className="text-ezapply-darkblue">ACT Score</Label>
                       <Input
                         id="actScore"
                         placeholder="e.g. 24"
                         value={formData.actScore}
                         onChange={handleChange}
+                        className="text-ezapply-darkblue"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="greScore">GRE Score</Label>
+                      <Label htmlFor="greScore" className="text-ezapply-darkblue">GRE Score</Label>
                       <Input
                         id="greScore"
                         placeholder="e.g. 310"
                         value={formData.greScore}
                         onChange={handleChange}
+                        className="text-ezapply-darkblue"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="gmatScore">GMAT Score</Label>
+                      <Label htmlFor="gmatScore" className="text-ezapply-darkblue">GMAT Score</Label>
                       <Input
                         id="gmatScore"
                         placeholder="e.g. 650"
                         value={formData.gmatScore}
                         onChange={handleChange}
+                        className="text-ezapply-darkblue"
                       />
                     </div>
                   </div>

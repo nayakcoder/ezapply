@@ -64,7 +64,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    @apply font-semibold tracking-tight;
+    @apply font-semibold tracking-tight text-ezapply-darkblue;
+  }
+
+  p {
+    @apply text-ezapply-darkblue;
   }
 
   .hero-gradient {

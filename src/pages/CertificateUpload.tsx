@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Loader2, Upload, FileUp, Info } from "lucide-react";
+import { ArrowLeft, Loader2, FileUp, Info } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -77,17 +78,17 @@ const CertificateUpload = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ezapply-lightblue">
       {/* Sidebar Navigation (reused from Dashboard) */}
-      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-blue text-white shadow-lg">
+      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-darkblue text-white shadow-lg">
         <div className="p-6">
           <div className="flex items-center gap-2 mb-8">
-            <span className="font-bold text-2xl">EZ<span className="text-ezapply-teal">Apply</span></span>
+            <span className="font-bold text-2xl">EZ<span className="text-ezapply-blue">Apply</span></span>
           </div>
           
           <nav className="space-y-6">
             <div>
-              <p className="text-xs uppercase text-ezapply-lightblue/70 font-semibold tracking-wider mb-2">Main</p>
+              <p className="text-xs uppercase text-ezapply-gray font-semibold tracking-wider mb-2">Main</p>
               <ul className="space-y-1">
                 <li>
                   <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
@@ -110,7 +111,7 @@ const CertificateUpload = () => {
         <div className="mb-6">
           <button
             onClick={() => navigate("/dashboard")}
-            className="flex items-center text-sm font-medium text-ezapply-blue hover:text-ezapply-darkblue transition-colors"
+            className="flex items-center text-sm font-medium text-ezapply-darkblue hover:text-ezapply-blue transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Dashboard
@@ -118,11 +119,11 @@ const CertificateUpload = () => {
         </div>
         
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">Additional Certifications</h1>
-          <p className="text-gray-600">Upload your test scores and academic information</p>
+          <h1 className="text-3xl font-bold text-ezapply-darkblue">Additional Certifications</h1>
+          <p className="text-ezapply-gray">Upload your test scores and academic information</p>
         </header>
         
-        <Card className="max-w-3xl">
+        <Card className="max-w-3xl bg-white">
           <CardHeader>
             <CardTitle>Academic & Test Information</CardTitle>
             <CardDescription>
@@ -177,7 +178,7 @@ const CertificateUpload = () => {
                 </div>
                 
                 <div className="border-t pt-4 mt-6">
-                  <h3 className="font-medium mb-4">Test Scores (Optional)</h3>
+                  <h3 className="font-medium mb-4 text-ezapply-darkblue">Test Scores (Optional)</h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -223,9 +224,9 @@ const CertificateUpload = () => {
                 </div>
                 
                 <div className="border-t pt-4 mt-6">
-                  <h3 className="font-medium mb-4">Upload Certificates</h3>
+                  <h3 className="font-medium mb-4 text-ezapply-darkblue">Upload Certificates</h3>
                   
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                  <div className="border-2 border-dashed border-ezapply-gray/30 rounded-lg p-6 text-center">
                     <Input
                       id="certificate"
                       type="file"
@@ -236,11 +237,11 @@ const CertificateUpload = () => {
                       htmlFor="certificate"
                       className="cursor-pointer flex flex-col items-center justify-center"
                     >
-                      <FileUp className="h-10 w-10 text-gray-400 mb-2" />
-                      <span className="font-medium text-gray-700 mb-1">
+                      <FileUp className="h-10 w-10 text-ezapply-gray mb-2" />
+                      <span className="font-medium text-ezapply-darkblue mb-1">
                         {selectedFile ? selectedFile.name : "Click to upload certificate"}
                       </span>
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-ezapply-gray">
                         PDF, JPG, or PNG (max. 5MB)
                       </span>
                     </Label>
@@ -253,7 +254,7 @@ const CertificateUpload = () => {
                     checked={formData.termsAgreed}
                     onCheckedChange={handleCheckboxChange}
                   />
-                  <Label htmlFor="terms" className="text-sm">
+                  <Label htmlFor="terms" className="text-sm text-ezapply-darkblue">
                     I confirm that all the information provided is accurate and authentic.
                   </Label>
                 </div>
@@ -261,7 +262,7 @@ const CertificateUpload = () => {
               
               <Button
                 type="submit"
-                className="w-full bg-ezapply-blue hover:bg-ezapply-darkblue"
+                className="w-full bg-ezapply-blue hover:bg-ezapply-darkblue text-white"
                 disabled={isLoading}
               >
                 {isLoading ? (

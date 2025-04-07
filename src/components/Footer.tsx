@@ -5,42 +5,42 @@ import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8">
+    <footer className="bg-card pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <span className="text-ezapply-blue font-bold text-2xl">
+              <span className="font-heading text-gradient font-bold text-2xl">
                 EZ<span className="text-ezapply-red">Apply</span>
               </span>
             </Link>
-            <p className="text-gray-600 max-w-xs">
+            <p className="text-muted-foreground max-w-xs">
               Helping you apply to universities in the USA and UK with ease. Your journey to study abroad starts here.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Quick Links</h3>
+            <h3 className="text-lg font-heading mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
@@ -49,21 +49,21 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Our Services</h3>
+            <h3 className="text-lg font-heading mb-4 text-foreground">Our Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 hover:text-ezapply-blue transition-colors cursor-pointer">
+              <li className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 University Application
               </li>
-              <li className="text-gray-600 hover:text-ezapply-blue transition-colors cursor-pointer">
+              <li className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 Document Upload
               </li>
-              <li className="text-gray-600 hover:text-ezapply-blue transition-colors cursor-pointer">
+              <li className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 Visa Process
               </li>
-              <li className="text-gray-600 hover:text-ezapply-blue transition-colors cursor-pointer">
+              <li className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 Profile Creation
               </li>
-              <li className="text-gray-600 hover:text-ezapply-blue transition-colors cursor-pointer">
+              <li className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 Fee Payment Guidance
               </li>
             </ul>
@@ -71,28 +71,28 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Contact Us</h3>
+            <h3 className="text-lg font-heading mb-4 text-foreground">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <Mail size={18} className="text-ezapply-blue mt-1 flex-shrink-0" />
-                <a href="mailto:ezapply.info@gmail.com" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Mail size={18} className="text-primary mt-1 flex-shrink-0" />
+                <a href="mailto:ezapply.info@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   ezapply.info@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Phone size={18} className="text-ezapply-blue mt-1 flex-shrink-0" />
-                <a href="https://wa.me/9779840610844" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <Phone size={18} className="text-primary mt-1 flex-shrink-0" />
+                <a href="https://wa.me/9779840610844" className="text-muted-foreground hover:text-primary transition-colors">
                   +977 984 061 0844 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-center space-x-3 mt-4">
-                <a href="https://facebook.com" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <a href="https://facebook.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="https://instagram.com" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <a href="https://instagram.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="mailto:ezapply.info@gmail.com" className="text-gray-600 hover:text-ezapply-blue transition-colors">
+                <a href="mailto:ezapply.info@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={20} />
                 </a>
               </li>
@@ -101,8 +101,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-          <p className="text-gray-500 text-sm">
+        <div className="mt-12 pt-8 border-t border-border text-center">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} EZApply. All rights reserved.
           </p>
         </div>

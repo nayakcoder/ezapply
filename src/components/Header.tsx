@@ -12,68 +12,68 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <header className="fixed w-full backdrop-blur-md bg-background/80 z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-ezapply-blue font-bold text-2xl">EZ<span className="text-ezapply-red">Apply</span></span>
+          <span className="font-heading text-gradient font-bold text-2xl">EZ<span className="text-ezapply-red">Apply</span></span>
         </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-gray-600 hover:text-ezapply-blue font-medium transition-colors">
+          <Link to="/" className="text-foreground/80 hover:text-primary font-medium transition-colors">
             Home
           </Link>
-          <Link to="/services" className="text-gray-600 hover:text-ezapply-blue font-medium transition-colors">
+          <Link to="/services" className="text-foreground/80 hover:text-primary font-medium transition-colors">
             Services
           </Link>
-          <Link to="/about" className="text-gray-600 hover:text-ezapply-blue font-medium transition-colors">
+          <Link to="/about" className="text-foreground/80 hover:text-primary font-medium transition-colors">
             About Us
           </Link>
-          <Link to="/contact" className="text-gray-600 hover:text-ezapply-blue font-medium transition-colors">
+          <Link to="/contact" className="text-foreground/80 hover:text-primary font-medium transition-colors">
             Contact
           </Link>
           <Link to="/login">
-            <Button variant="outline" className="border-ezapply-blue text-ezapply-blue hover:bg-ezapply-blue hover:text-white">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-foreground">
               Login
             </Button>
           </Link>
           <Link to="/signup">
-            <Button className="bg-ezapply-blue text-white hover:bg-ezapply-darkblue animated-button">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/80 animated-button">
               Get Started
             </Button>
           </Link>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-700" onClick={toggleMenu}>
+        <button className="md:hidden text-foreground" onClick={toggleMenu}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-card border-t border-border">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 animate-fade-in">
-            <Link to="/" className="text-gray-600 hover:text-ezapply-blue font-medium p-2" onClick={toggleMenu}>
+            <Link to="/" className="text-foreground/80 hover:text-primary font-medium p-2" onClick={toggleMenu}>
               Home
             </Link>
-            <Link to="/services" className="text-gray-600 hover:text-ezapply-blue font-medium p-2" onClick={toggleMenu}>
+            <Link to="/services" className="text-foreground/80 hover:text-primary font-medium p-2" onClick={toggleMenu}>
               Services
             </Link>
-            <Link to="/about" className="text-gray-600 hover:text-ezapply-blue font-medium p-2" onClick={toggleMenu}>
+            <Link to="/about" className="text-foreground/80 hover:text-primary font-medium p-2" onClick={toggleMenu}>
               About Us
             </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-ezapply-blue font-medium p-2" onClick={toggleMenu}>
+            <Link to="/contact" className="text-foreground/80 hover:text-primary font-medium p-2" onClick={toggleMenu}>
               Contact
             </Link>
             <div className="flex flex-col space-y-2 pt-2">
               <Link to="/login" onClick={toggleMenu}>
-                <Button variant="outline" className="w-full border-ezapply-blue text-ezapply-blue">
+                <Button variant="outline" className="w-full border-primary text-primary">
                   Login
                 </Button>
               </Link>
               <Link to="/signup" onClick={toggleMenu}>
-                <Button className="w-full bg-ezapply-blue text-white">
+                <Button className="w-full bg-primary text-primary-foreground">
                   Get Started
                 </Button>
               </Link>

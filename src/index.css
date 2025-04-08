@@ -168,8 +168,42 @@
       line-height: 2rem !important;
     }
     
+    h3 {
+      font-size: 1.25rem !important;
+      line-height: 1.75rem !important;
+    }
+    
     .float-animation {
       animation: none;
+    }
+
+    /* Fix spacing on mobile */
+    .mobile-px-4 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    
+    .mobile-py-4 {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    .mobile-p-4 {
+      padding: 1rem !important;
+    }
+    
+    .mobile-gap-4 {
+      gap: 1rem !important;
+    }
+
+    /* Text size adjustments for mobile */
+    .text-2xs {
+      font-size: 0.65rem !important;
+    }
+    
+    /* Ensure buttons are more tappable on mobile */
+    button, .button, [role="button"] {
+      min-height: 2.5rem;
     }
   }
 }
@@ -189,5 +223,27 @@
   
   .safe-padding-bottom {
     padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+  }
+
+  /* Mobile navigation helpers */
+  .mobile-nav-height {
+    height: calc(100vh - 3.5rem);
+  }
+  
+  /* Safari/iOS specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    .ios-height-fix {
+      height: -webkit-fill-available;
+    }
+    
+    .ios-pb-fix {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+
+  /* Large touch targets for mobile */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

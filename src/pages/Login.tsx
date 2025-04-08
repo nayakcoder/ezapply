@@ -47,11 +47,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       
       <div className="flex-1 flex items-center justify-center py-20">
-        <div className="w-full max-w-md px-8 py-12 bg-white rounded-xl shadow-sm">
+        <div className="w-full max-w-md px-8 py-12 bg-white rounded-xl shadow-card">
           <div className="mb-6">
             <Link to="/" className="flex items-center text-sm font-medium text-ezapply-blue hover:text-ezapply-darkblue transition-colors">
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -60,8 +60,8 @@ const Login = () => {
           </div>
 
           <div className="mb-8 text-center">
-            <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
-            <p className="text-gray-600 mt-2">Sign in to continue your application</p>
+            <h1 className="text-2xl font-bold text-ezapply-darkblue">Welcome Back</h1>
+            <p className="text-ezapply-gray mt-2">Sign in to continue your application</p>
           </div>
 
           {error && (
@@ -73,19 +73,20 @@ const Login = () => {
 
           <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="username">Username</Label>
+              <Label htmlFor="username" className="text-ezapply-darkblue">Username</Label>
               <Input 
                 id="username" 
                 type="text" 
                 placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                className="border-ezapply-gray/20 focus:border-ezapply-blue focus:ring-ezapply-blue/20"
               />
             </div>
             
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password" className="text-ezapply-darkblue">Password</Label>
                 <Link 
                   to="/forgot-password" 
                   className="text-xs text-ezapply-blue hover:text-ezapply-darkblue transition-colors"
@@ -99,6 +100,7 @@ const Login = () => {
                 placeholder="••••••••" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                className="border-ezapply-gray/20 focus:border-ezapply-blue focus:ring-ezapply-blue/20"
               />
             </div>
             
@@ -117,7 +119,7 @@ const Login = () => {
           </form>
           
           <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-ezapply-gray">
               Don't have an account?{" "}
               <Link to="/signup" className="text-ezapply-blue hover:text-ezapply-darkblue font-medium transition-colors">
                 Create one

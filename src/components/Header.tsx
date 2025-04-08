@@ -12,10 +12,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full backdrop-blur-md bg-ezapply-lightblue/80 z-50 border-b border-ezapply-gray/30">
+    <header className="fixed w-full backdrop-blur-md bg-white/90 z-50 border-b border-ezapply-gray/10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-heading font-bold text-2xl text-ezapply-darkblue">EZ<span className="text-ezapply-blue">Apply</span></span>
+          <span className="font-heading font-bold text-2xl">
+            <span className="text-ezapply-darkblue">EZ</span>
+            <span className="text-ezapply-blue">Apply</span>
+          </span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -52,7 +55,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-ezapply-gray/30">
+        <div className="md:hidden bg-white border-t border-ezapply-gray/10">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 animate-fade-in">
             <Link to="/" className="text-ezapply-darkblue hover:text-ezapply-blue font-medium p-2" onClick={toggleMenu}>
               Home

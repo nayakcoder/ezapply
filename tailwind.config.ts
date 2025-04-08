@@ -68,7 +68,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ezapply: {
-					blue: '#186CCC',    // Bright blue from image
+					blue: '#186CCC',     // Bright blue from image
 					darkblue: '#20446F', // Dark blue from image
 					lightblue: '#DFEAF8', // Light blue from image
 					gray: '#849EC0',     // Gray blue from image
@@ -80,6 +80,11 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				card: '0px 4px 8px rgba(24, 108, 204, 0.05)',
+				'card-hover': '0px 8px 16px rgba(24, 108, 204, 0.1)',
+				button: '0px 2px 4px rgba(24, 108, 204, 0.2)'
 			},
 			keyframes: {
 				'accordion-down': {

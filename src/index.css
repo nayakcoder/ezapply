@@ -7,29 +7,29 @@
 
 @layer base {
   :root {
-    --background: 210 45% 98%;
-    --foreground: 212 55% 25%;
+    --background: 216 40% 95%;
+    --foreground: 212 55% 28%;
 
     --card: 0 0% 100%;
-    --card-foreground: 212 55% 25%;
+    --card-foreground: 212 55% 28%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 212 55% 25%;
+    --popover-foreground: 212 55% 28%;
 
     --primary: 214 78% 45%;
-    --primary-foreground: 210 45% 98%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 214 28% 63%;
-    --secondary-foreground: 210 45% 98%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 213 30% 95%;
-    --muted-foreground: 215 28% 63%;
+    --muted-foreground: 214 28% 63%;
 
     --accent: 214 40% 76%;
-    --accent-foreground: 210 55% 25%;
+    --accent-foreground: 212 55% 28%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 45% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 214 30% 80%;
     --input: 214 30% 80%;
@@ -37,10 +37,10 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 212 55% 25%;
-    --sidebar-foreground: 210 45% 98%;
+    --sidebar-background: 212 55% 28%;
+    --sidebar-foreground: 216 40% 95%;
     --sidebar-primary: 214 78% 45%;
-    --sidebar-primary-foreground: 210 45% 98%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 213 30% 95%;
     --sidebar-accent-foreground: 214 78% 45%;
     --sidebar-border: 214 28% 63%;
@@ -73,7 +73,7 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, #DFEAF8 100%);
+    background: linear-gradient(135deg, #DFEAF8 0%, #ffffff 100%);
   }
   
   .service-card-hover {
@@ -89,6 +89,7 @@
     position: relative;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(24, 108, 204, 0.2);
   }
   
   .animated-button:before {
@@ -139,10 +140,20 @@
   .glow-card:hover {
     box-shadow: 0 0 30px rgba(24, 108, 204, 0.2);
   }
+  
+  .blue-gradient-card {
+    background: linear-gradient(135deg, #186CCC, #20446F);
+    color: white;
+  }
+  
+  .light-card {
+    background-color: #DFEAF8;
+    border: 1px solid rgba(132, 158, 192, 0.2);
+  }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-[#20446F] to-[#186CCC] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-ezapply-darkblue to-ezapply-blue bg-clip-text text-transparent;
   }
 }

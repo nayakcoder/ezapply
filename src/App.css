@@ -39,3 +39,53 @@
   background-color: rgba(223, 234, 248, 0.8);
   border: 1px solid rgba(132, 158, 192, 0.2);
 }
+
+.primary-button {
+  background-color: #186CCC;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(24, 108, 204, 0.2);
+}
+
+.primary-button:hover {
+  background-color: #1559a9;
+  box-shadow: 0 4px 8px rgba(24, 108, 204, 0.3);
+}
+
+.secondary-button {
+  background-color: white;
+  color: #186CCC;
+  border: 1px solid #186CCC;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.secondary-button:hover {
+  background-color: #f5f9fe;
+  box-shadow: 0 2px 4px rgba(24, 108, 204, 0.1);
+}
+
+.dark-card {
+  background-color: #20446F;
+  color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.light-card {
+  background-color: #DFEAF8;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.white-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(132, 158, 192, 0.15);
+  border: 1px solid rgba(132, 158, 192, 0.1);
+}

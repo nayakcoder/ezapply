@@ -39,18 +39,18 @@ const About = () => {
 
   const team = [
     {
-      name: "John Smith",
+      name: "Rishav Nayak",
       role: "Founder & CEO",
       bio: "Former international student advisor with 10+ years of experience helping students achieve their study abroad dreams."
     },
     {
-      name: "Sarah Johnson",
-      role: "University Relations",
+      name: "Rahul Mahaseth",
+      role: "Management & University Relations",
       bio: "Coordinates with our university partners to ensure students get the most updated information and opportunities."
     },
     {
-      name: "Michael Chen",
-      role: "Visa Specialist",
+      name: "Yubraj Kc",
+      role: "Co-Founder & Visa Specialist",
       bio: "Expert in navigating the complex visa application process with a 98% success rate."
     }
   ];

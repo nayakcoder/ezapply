@@ -59,7 +59,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -150,10 +150,44 @@
     background-color: #DFEAF8;
     border: 1px solid rgba(132, 158, 192, 0.2);
   }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.875rem !important;
+      line-height: 2.25rem !important;
+    }
+    
+    h2 {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+    }
+    
+    .float-animation {
+      animation: none;
+    }
+  }
 }
 
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-ezapply-darkblue to-ezapply-blue bg-clip-text text-transparent;
+  }
+  
+  .mobile-container {
+    @apply px-4 mx-auto w-full;
+  }
+  
+  .safe-padding-top {
+    padding-top: calc(env(safe-area-inset-top) + 1rem);
+  }
+  
+  .safe-padding-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
   }
 }

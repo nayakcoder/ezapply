@@ -89,3 +89,26 @@
   box-shadow: 0 4px 8px rgba(132, 158, 192, 0.15);
   border: 1px solid rgba(132, 158, 192, 0.1);
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.625rem 1rem;
+  }
+  
+  .white-card,
+  .light-card,
+  .dark-card {
+    padding: 1rem;
+  }
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  .ios-bottom-padding {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

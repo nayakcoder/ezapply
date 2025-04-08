@@ -38,7 +38,7 @@ const Header = () => {
             </Button>
           </Link>
           <Link to="/signup">
-            <Button className="bg-ezapply-darkblue text-white hover:bg-ezapply-blue animated-button">
+            <Button className="bg-ezapply-blue text-white hover:bg-ezapply-darkblue animated-button">
               Get Started
             </Button>
           </Link>
@@ -73,7 +73,7 @@ const Header = () => {
                 </Button>
               </Link>
               <Link to="/signup" onClick={toggleMenu}>
-                <Button className="w-full bg-ezapply-darkblue text-white">
+                <Button className="w-full bg-ezapply-blue text-white hover:bg-ezapply-darkblue">
                   Get Started
                 </Button>
               </Link>

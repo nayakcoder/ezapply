@@ -12,9 +12,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Loader2, FileUp, Info } from "lucide-react";
+import { Loader2, FileUp, Info } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
+import DashboardLayout from "@/components/DashboardLayout";
 
 const CertificateUpload = () => {
   const { toast } = useToast();
@@ -78,46 +79,8 @@ const CertificateUpload = () => {
   };
 
   return (
-    <div className="min-h-screen bg-ezapply-lightblue">
-      {/* Sidebar Navigation (reused from Dashboard) */}
-      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-darkblue text-ezapply-lightblue shadow-lg">
-        <div className="p-6">
-          <div className="flex items-center gap-2 mb-8">
-            <span className="font-bold text-2xl text-white">EZ<span className="text-ezapply-blue">Apply</span></span>
-          </div>
-          
-          <nav className="space-y-6">
-            <div>
-              <p className="text-xs uppercase text-ezapply-gray font-semibold tracking-wider mb-2">Main</p>
-              <ul className="space-y-1">
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    Dashboard
-                  </Button>
-                </li>
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    My Application
-                  </Button>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </aside>
-      
-      {/* Main Content */}
-      <div className="ml-64 p-8">
-        <div className="mb-6">
-          <button
-            onClick={() => navigate("/dashboard")}
-            className="flex items-center text-sm font-medium text-ezapply-darkblue hover:text-ezapply-blue transition-colors"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Dashboard
-          </button>
-        </div>
-        
+    <DashboardLayout>
+      <div className="p-8">
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-ezapply-darkblue">Additional Certifications</h1>
           <p className="text-ezapply-gray">Upload your test scores and academic information</p>
@@ -282,7 +245,7 @@ const CertificateUpload = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 

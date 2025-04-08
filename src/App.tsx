@@ -14,6 +14,11 @@ import CertificateUpload from "./pages/CertificateUpload";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import MyApplication from "./pages/MyApplication";
+import Universities from "./pages/Universities";
+import Documents from "./pages/Documents";
+import Settings from "./pages/Settings";
+import Notes from "./pages/Notes";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +35,11 @@ const App = () => (
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/certificate-upload" element={<CertificateUpload />} />
+          <Route path="/my-application" element={<MyApplication />} />
+          <Route path="/universities" element={<Universities />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/notes" element={<Notes />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

@@ -11,25 +11,15 @@ import {
   AlertCircle, 
   Clock, 
   GraduationCap, 
-  User, 
-  LogOut, 
-  Settings, 
   FileUp 
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import DashboardLayout from "@/components/DashboardLayout";
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-
-  const handleLogout = () => {
-    toast({
-      title: "Logged out successfully",
-      description: "You have been logged out of your account",
-    });
-    navigate("/");
-  };
 
   // Mock data for the application progress
   const applicationStatus = "in-progress"; // can be 'not-started', 'in-progress', 'submitted', 'accepted'
@@ -44,74 +34,14 @@ const Dashboard = () => {
     { id: 6, name: "Document Upload", status: "not-started" },
     { id: 7, name: "Review & Submit", status: "not-started" }
   ];
+  
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Sidebar Navigation */}
-      <aside className="fixed top-0 left-0 h-full w-64 bg-ezapply-blue text-white shadow-lg">
-        <div className="p-6">
-          <div className="flex items-center gap-2 mb-8">
-            <span className="font-bold text-2xl">EZ<span className="text-ezapply-teal">Apply</span></span>
-          </div>
-          
-          <nav className="space-y-6">
-            <div>
-              <p className="text-xs uppercase text-ezapply-lightblue/70 font-semibold tracking-wider mb-2">Main</p>
-              <ul className="space-y-1">
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    <User className="mr-2 h-5 w-5" />
-                    Dashboard
-                  </Button>
-                </li>
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    <FileText className="mr-2 h-5 w-5" />
-                    My Application
-                  </Button>
-                </li>
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    <GraduationCap className="mr-2 h-5 w-5" />
-                    Universities
-                  </Button>
-                </li>
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    <FileUp className="mr-2 h-5 w-5" />
-                    Documents
-                  </Button>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <p className="text-xs uppercase text-ezapply-lightblue/70 font-semibold tracking-wider mb-2">Account</p>
-              <ul className="space-y-1">
-                <li>
-                  <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-white/10">
-                    <Settings className="mr-2 h-5 w-5" />
-                    Settings
-                  </Button>
-                </li>
-                <li>
-                  <Button 
-                    variant="ghost" 
-                    onClick={handleLogout}
-                    className="w-full justify-start text-white hover:text-white hover:bg-white/10"
-                  >
-                    <LogOut className="mr-2 h-5 w-5" />
-                    Logout
-                  </Button>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </aside>
-      
-      {/* Main Content */}
-      <div className="ml-64 p-8">
+    <DashboardLayout>
+      <div className="p-8">
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Welcome back, John!</h1>
           <p className="text-gray-600">Here's the status of your university application</p>
@@ -135,7 +65,10 @@ const Dashboard = () => {
                 </div>
                 <Progress value={applicationProgress} className="h-2 bg-gray-200" />
                 
-                <Button className="w-full bg-ezapply-blue hover:bg-ezapply-darkblue">
+                <Button 
+                  className="w-full bg-ezapply-blue hover:bg-ezapply-darkblue"
+                  onClick={() => handleNavigate("/my-application")}
+                >
                   Continue Application
                 </Button>
               </div>
@@ -182,19 +115,35 @@ const Dashboard = () => {
               <CardDescription>Common tasks you may need</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-              <Button variant="outline" className="w-full justify-start">
+              <Button 
+                variant="outline" 
+                className="w-full justify-start"
+                onClick={() => handleNavigate("/documents")}
+              >
                 <FileUp className="mr-2 h-4 w-4" />
                 Upload Documents
               </Button>
-              <Button variant="outline" className="w-full justify-start">
+              <Button 
+                variant="outline" 
+                className="w-full justify-start"
+                onClick={() => handleNavigate("/universities")}
+              >
                 <GraduationCap className="mr-2 h-4 w-4" />
                 Browse Universities
               </Button>
-              <Button variant="outline" className="w-full justify-start">
-                <Settings className="mr-2 h-4 w-4" />
+              <Button 
+                variant="outline" 
+                className="w-full justify-start"
+                onClick={() => handleNavigate("/settings")}
+              >
+                <Info className="mr-2 h-4 w-4" />
                 Update Profile
               </Button>
-              <Button variant="outline" className="w-full justify-start text-ezapply-blue hover:text-white hover:bg-ezapply-blue">
+              <Button 
+                variant="outline" 
+                className="w-full justify-start text-ezapply-blue hover:text-white hover:bg-ezapply-blue"
+                onClick={() => handleNavigate("/notes")}
+              >
                 <Info className="mr-2 h-4 w-4" />
                 Contact Support
               </Button>
@@ -252,7 +201,7 @@ const Dashboard = () => {
           </div>
         </section>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
